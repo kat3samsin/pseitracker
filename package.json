@@ -1,0 +1,15 @@
+{
+  "name": "pseisniper",
+  "version": "1.0.0",
+  "description": "PSEI Broker and Volume Analysis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kat3samsin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.eng.netsuite.com:ksamsin/pseisniper.git"
+  }
+}
