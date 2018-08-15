@@ -1,4 +1,5 @@
 var request = require('request');
+var tabletojson = require('tabletojson');
 
 module.exports = function () {
     return new HistoricalBroker();
@@ -8,14 +9,13 @@ var HistoricalBroker = function () {
 };
 
 HistoricalBroker.prototype.getStockInfo = function (params) {
-    var request = require("request");
     var options = {
         method: 'POST',
         url: 'https://ph6.colfinancial.com/ape/FINAL2_STARTER/quotes/HistoricalBrokerTxOUT2.asp',
         headers: {
             // 'Postman-Token': '287802a5-4ee1-453a-95dc-85079212a9bb',
             'Cache-Control': 'no-cache',
-            Cookie: params.cookie,
+            Cookie: '',
             mode: 'cors',
             method: 'POST',
             referrerPolicy: 'no-referrer-when-downgrade',
@@ -35,6 +35,8 @@ HistoricalBroker.prototype.getStockInfo = function (params) {
 
     request(options, function (error, response, body) {
         if (error) throw new Error(error);
+        var result = tabletojson.convert(body);
         console.log(body);
+        console.log('result: ' + JSON.stringify(result));
     });
 };

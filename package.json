@@ -11,6 +11,16 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kat3samsin/pseitracker"
+    "url": "git+https://github.com/kat3samsin/pseitracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kat3samsin/pseitracker/issues"
+  },
+  "homepage": "https://github.com/kat3samsin/pseitracker#readme",
+  "keywords": [],
+  "dependencies": {
+    "prompt": "^1.0.0",
+    "request": "^2.87.0",
+    "tabletojson": "^0.9.8"
   }
 }
